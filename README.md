@@ -22,4 +22,6 @@
  ***
  `ccv` validates a credit card number using *Luhn's Algorithm*.  
  Syntax: `ccv <cc number>`
- 
+ ***
+ `tax` adds the sales tax for a price entered by a user.
+ Syntax: `tax <two digit state code or own sales tax percent> <subtotal>`
