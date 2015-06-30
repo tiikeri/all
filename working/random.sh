@@ -1,4 +1,5 @@
 #!/bin/bash
+# calculate the number of possibilities
 gen(){
         printf "%d^${2##*[!0-9]*}\n"  "$(($(
                 export  LC_ALL=C; a=$1
@@ -22,11 +23,9 @@ gen(){
 }
 ############################################################
 #main script
-#calculate possible combinations
-gen $@
+gen $@ #display possibilities
 #only generate one
-if [ $# == 2 ] 
-then
+if [ $# == 2 ] ; then
     < /dev/urandom env LC_CTYPE=C tr -dc $1 | head -c $2 | while read -n 1 x 
     do
 	printf "\e[1;36m$x"

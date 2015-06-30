@@ -1,14 +1,13 @@
 #!/usr/local/bin/bash
-if [[ $TERM != "xterm-256color" ]] ; then
+if [[ $TERM != "xterm-256color" ]] ; then #check if the terminal is 256-color. 
 	echo "This program requires xterm-256color. Use coin2-nocolor instead."
 	exit 1
 else
-cat /dev/null > out.txt
-BCPID=$!
-resetcolor() {
+cat /dev/null > out.txt #reset out.txt
+resetcolor() { #reset the color
 	echo -ne "\e[0m"
 }
-color() {
+color() { #function to set color
 	resetcolor
 	if [ $# -eq 1 ] ; then echo -ne "\033[38;5;${1}m"
 		elif  [ $2 == "b" ]
@@ -18,18 +17,18 @@ color() {
 	fi
 }
 
-prob() {
+prob() { #calculate experimental probabilities
 	x=$(echo "scale=4;($1/$c)" | bc)
 	y=$(echo "scale=2;$x*100" | bc) 
 	echo "${y%??}%"
  }
-readmessage() {
+readmessage() { #if arguments are not entered, read a number entered by a user
 if [ $# -eq 1 ] ; then c=$1 && echo "Flipping coins..."  
 	else
 	echo "Enter number of coins to flip..." ; read c ; echo "Flipping coins..."
 fi
 }
-flip() {
+flip() { #flip coins
 	 < /dev/urandom LC_CTYPE=C gtr -dc HT | head -c $c | while read -n 1 ccoin
 	do
 	case $ccoin in
@@ -53,7 +52,7 @@ t=`grep -o "T" <<<"$co" | wc -l`
 echo " "
 }
 
-stats() {
+stats() { #experimental functions
 if (($c<5)) 
 then
 	exit 1
