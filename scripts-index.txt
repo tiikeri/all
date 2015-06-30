@@ -18,6 +18,8 @@ syntax: ./poker.sh
 random.sh: generates a random string
 syntax: ./random.sh <[A-Z][a-z][0-9][custom characters]>
 ######
+cc-validator.sh: validates a credit card using the modulo 10 method
+syntax: ./cc-validator.sh <CC number>
 # nonworking scripts
 tax.sh: adds sales tax to a price
 tile.sh: calculates price of WxH floor using WxH of tiles
