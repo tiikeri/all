@@ -25,3 +25,6 @@
  ***
  `tax` adds the sales tax for a price entered by a user.
  Syntax: `tax <two digit state code or own sales tax percent> <subtotal>`
+ ***
+ `horoscope` displays the horoscope from the huffington post.
+ Syntax: `horoscope <zodiac>`
