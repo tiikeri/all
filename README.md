@@ -31,3 +31,5 @@
  ***
  `bank_manager` is a virtual ATM! Enter your transactions manually and track your account balances!
  Syntax: `bank_manager [view-balances] [view-statement]` (The script is interactive)
+ ***
+ `99bottles` ♪ Ninety-nine bottles of beer on the wall, take one down and pass it around… ♪
