@@ -29,7 +29,16 @@
  `horoscope` displays the horoscope from the huffington post.
  Syntax: `horoscope <zodiac>`
  ***
- `bank_manager` is a virtual ATM! Enter your transactions manually and track your account balances!
+ `bank_manager` is a virtual ATM! Enter your transactions manually and track your account balances.  
  Syntax: `bank_manager [view-balances] [view-statement]` (The script is interactive)
  ***
  `99bottles` ♪ Ninety-nine bottles of beer on the wall, take one down and pass it around… ♪
+ ***
+ `stocks` gets the current price for a certain stock from *[Google Finance](https://www.google.com/finance)*  
+ Syntax: `stocks <stock symbol>`
+ ***
+ `crchecker` gets the current exchange rate for a certain exchange (like USDGBP).  
+ Syntax: `crchecker <exchange>`
+ ***
+ `cconvert` converts currencies.  
+ Syntax: `cconvert <amount> <source currency> <result currency>`
