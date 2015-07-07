@@ -42,3 +42,29 @@
  ***
  `cconvert.sh` converts currencies.  
  Syntax: `cconvert <amount> <source currency> <result currency>`
+ ***
+ `fibonacci-sequcence.sh` finds the fibonacci sequence of *n*.
+ Syntax: `fibonacci-sequence <num>`
+ ***
+ `mortgage.sh` calculates monthly payment for date (interactive, no syntax)
+ ***
+ `pf.sh` finds the prime factorization of a number.
+ Syntax: `pf <num>`
+ ***
+ `wxhfloor.sh` finds the price of tile for covering wxh floor (interactive, no syntax)
+ ***
+ `e_to_nth.sh` displays eulers number to nth digit.
+ Syntax: `e_to_nth <num>`
+ ***
+ `factorial.sh` respectively, displays the factorial of a number.
+ Syntax: `factorial <num>`
+ ***
+ `atinlay.sh` displays the given string in pig latin.
+ Syntax: `atinlay <string>`
+ ***
+ `pdrome.sh` checks if the given string is a [palindrome](https://en.wikipedia.org/wiki/Palindrome).
+ Syntax: `pdrome <string>`
+ ***
+ `vowelcount.sh` counts the vowels in a string, displays the total and breaks the totals down.
+ Syntax: `vowelcount "<string>"` *note the quotations.*
+ ***
