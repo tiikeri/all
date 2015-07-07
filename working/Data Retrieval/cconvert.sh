@@ -3,17 +3,17 @@ formatted=$(echo "$2$3")
 trade=$formatted
 mkdir -p cconvert-files
 cd cconvert-files
-touch rate.txt # create info.txt if missing
-touch raw.txt # create raw-info.txt if missing
-echo $( wget http://www.google.com/finance/info?q=CURRENCY%3a$trade -q -O -) > raw.txt # get the information from Google Finance and write it to info.txt
-tr "\" ," "\n" < raw.txt > rate.txt # split the information from Google Finance into separate lines
+echo $( wget http://www.google.com/finance/info?q=CURRENCY%3a$trade -q -O -) > raw-json.txt # get the information from Google Finance and write it to info.txt
+cat raw-json.txt | sed 's/[// []//g' > raw.json.txt
+cat raw.json.txt | sed 's/[]]//g' > raw2.json.txt
+jq ".[]" raw2.json.txt | sed 's/["]//g' > json.txt
 ##########set exchng variables############
-exchange=$(sed '16q;d' < rate.txt)	 #
-exchRate=$(sed '32q;d' < rate.txt) 	 #
-lastUpdate=$(sed '81q;d' < rate.txt)     #
-priceChange=$(sed '89q;d' < rate.txt)    #
-percentChange=$(sed '105q;d' < rate.txt) #
-##########################################
+exchange=$(sed '2q;d' < json.txt)	 #
+exchRate=$(sed '4q;d' < json.txt) 	 #
+lastUpdate=$(sed '10q;d' < json.txt)  #
+priceChange=$(sed '11q;d' < json.txt)  #
+percentChange=$(sed '13q;d' < json.txt) #
+##############################################
 echo "Converting..."
 sym(){
 	case $1 in 
