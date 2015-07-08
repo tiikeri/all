@@ -21,6 +21,9 @@
     random 			generates a random string
     stocks			checks the stock market
     virc			checks the vircurex exchange for cryptocurrencies
+    balance			evaluates and balances two equations
+    mendel			generates probability of offspring getting a gene via mendelian genetics
+    encryptions		anything in encryption-scripts. 
     
     ##############
     #  Syntaxes  #
@@ -34,7 +37,8 @@
     random			<[A-Z][a-z][0-9]"*custom str*"> <length> <amount of strings>
     stocks			<ticker> - e.g GOOG or AAPL
     virc			<currency> <currency> - e.g DOGE BTC
-    
+    balance			<equation1> <equation2> - e.g (1+1)4 4(4-2)
+	encryptions		<string>		
     
 ###Scripts based on coding problems -
 ######Euler's Project:
@@ -79,6 +83,9 @@
 ######Rosetta Code
     99bottles		♪ Ninety-nine bottles of beer on the wall, take one down and pass it around… ♪
     floyd			generates n rows of floyd's triangle
+    langinascii		displays 'bash shell' in 3D ASCII art
+    rot13			prints the string in rot13
+    sumdigits		displays the sum of all digits in a number
     
     ############
     # Syntaxes #
@@ -86,3 +93,6 @@
     
     99bottles		*no syntax*
     floyd			<rows>
+    langinascii		*no syntax*
+    rot13			"<strings>"
+    sumdigits		<number>
