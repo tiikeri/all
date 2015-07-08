@@ -1,0 +1,14 @@
+#!/bin/bash
+for ((x=99; x>1; x--))
+do
+echo -n "$x bottles of beer on the wall, "
+echo -n "$x bottles of beer, "
+echo "Take one down, pass it around, "
+echo -n "$(($x-1)) bottles of beer on the wall!"
+echo -e "\n"
+sleep 0.5
+done
+echo -n "1 bottles of beer on the wall, "
+echo -n "1 bottles of beer, "
+echo "Take one down, pass it around, "
+echo "No more bottles of beer on the wall!"

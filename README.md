@@ -34,7 +34,7 @@
  ***
  `99bottles` ♪ Ninety-nine bottles of beer on the wall, take one down and pass it around… ♪
  ***
- `stocks.sh` gets the current price for a certain stock from *[Google Finance](https://www.google.com/finance)*  
+ `stocks.sh` gets the current price for a certain stock from *[Google Finance](https://www.google.com/finance)*.  **requires jq. `sudo apt-get jq` or `brew install jq`**  
  Syntax: `stocks <stock symbol>`
  ***
  `crchecker.sh` gets the current exchange rate for a certain exchange (like USDGBP).  
