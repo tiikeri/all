@@ -10,71 +10,77 @@
         \/___/  \/__/\/_/\/___/   \/_/\/_/    \/___/   \/_/\/_/\/____/\/____/\/____/
                                                                                 
                                                                                 
-##Scripts 
-***
- `change-return.sh` returns change amount for a value of money.  
- Syntax: `change-return <dollars> [cents]`
- ***
- `coinflip.sh` (digitally) flips coins for you. It will count the number of coins and, on demand, display experimental probabilities of getting heads or tails.  
- Syntax: `coinflip <number of coins> [e]` *e displays experimental probability*
- ***
- `dna.sh` generates a DNA sequence that is colored according to the components of a DNA sequence (AGCT).  
- Syntax: `dna <sequence length>`
- ***
- `pi-to-nth.sh` returns, respectively, pi to the *n*th digit.  
- Syntax: `pi-to-nth <n>`
- ***
- `poker` returns a randomly generated poker hand suited for Texas Hold'em (5 cards)  
- *No arguments*
- ***
- `random` returns a randomly generated string based on arguments given. Substitute n with a number to batch generate.   
- Syntax: `random <[A-Z][a-z][0-9][custom characters]> <length> [n]`
- ***
- `ccv.sh` validates a credit card number using *Luhn's Algorithm*.  
- Syntax: `ccv <cc number>`
- ***
- `tax.sh` adds the sales tax for a price entered by a user.
- Syntax: `tax <two digit state code or own sales tax percent> <subtotal>`
- ***
- `horoscope.sh` displays the horoscope from the huffington post.
- Syntax: `horoscope <zodiac>`
- ***
- `bank_manager.sh` is a virtual ATM! Enter your transactions manually and track your account balances.  
- Syntax: `bank_manager [view-balances] [view-statement]` (The script is interactive)
- ***
- `99bottles` ♪ Ninety-nine bottles of beer on the wall, take one down and pass it around… ♪
- ***
- `stocks.sh` gets the current price for a certain stock from *[Google Finance](https://www.google.com/finance)*.  **requires jq. `sudo apt-get jq` or `brew install jq`**  
- Syntax: `stocks <stock symbol>`
- ***
- `crchecker.sh` gets the current exchange rate for a certain exchange (like USDGBP).  
- Syntax: `crchecker <exchange>`
- ***
- `cconvert.sh` converts currencies.  
- Syntax: `cconvert <amount> <source currency> <result currency>`
- ***
- `fibonacci-sequcence.sh` finds the fibonacci sequence of *n*.
- Syntax: `fibonacci-sequence <num>`
- ***
- `mortgage.sh` calculates monthly payment for date (interactive, no syntax)
- ***
- `pf.sh` finds the prime factorization of a number.
- Syntax: `pf <num>`
- ***
- `wxhfloor.sh` finds the price of tile for covering wxh floor (interactive, no syntax)
- ***
- `e_to_nth.sh` displays eulers number to nth digit.
- Syntax: `e_to_nth <num>`
- ***
- `factorial.sh` respectively, displays the factorial of a number.
- Syntax: `factorial <num>`
- ***
- `atinlay.sh` displays the given string in pig latin.
- Syntax: `atinlay <string>`
- ***
- `pdrome.sh` checks if the given string is a [palindrome](https://en.wikipedia.org/wiki/Palindrome).
- Syntax: `pdrome <string>`
- ***
- `vowelcount.sh` counts the vowels in a string, displays the total and breaks the totals down.
- Syntax: `vowelcount "<string>"` *note the quotations.*
- ***
+###Scripts not based on a coding problem -
+    cconvert 		converts currencies  
+    coinflip  		generates coin flips (*optionally displays experimental probabilities*)  
+    crchecker  		checks the trade value of currencies
+    dna 			generates a random dna sequence
+    poker			generates a random poker hand
+    random 			generates a random string
+    stocks			checks the stock market
+    virc			checks the vircurex exchange for cryptocurrencies
+    
+    ##############
+    #  Syntaxes  #
+    ##############
+    
+    cconvert		<amount> <currency> <currency> - e.g 10.00 USD GBP
+    coinflip		<number> [e] (e displays experimental probabilities)
+    crchecker		<exchange> - e.g USDGBP or USDSEK
+    dna				<length>
+    poker			*no syntax*
+    random			<[A-Z][a-z][0-9]"*custom str*"> <length> <amount of strings>
+    stocks			<ticker> - e.g GOOG or AAPL
+    virc			<currency> <currency> - e.g DOGE BTC
+    
+    
+###Scripts based on coding problems -
+######Euler's Project:
+    3and5			adds the sum of all the integers from 1-999 that are multiples of 3 and 5
+    sumsd			finds the difference of (1+2+3..100)^2 and (1^2+2^2+3^2..100^2)
+######[Karan](https://github.com/karan)'s Projects Repo
+    bank_manager	a virtual atm
+    ccv				validates a credit card number using luhn's algorithm
+    change-return	returns change for a given amount of money
+    e_to_nth		returns euler's number to the nth digit
+    factorial		finds the factorial of a number
+    fs				finds the fibonacci sequence up to n
+    hn				checks if a number is a happy number
+    horoscope		gets today's horoscope for a zodiac sign
+    mortgage		finds the monthly payment for a mortgage
+    pdrome			see if a string is a palindrome
+    pf				gets the prime factorization for a number
+    pi-to-nth		returns pi to the nth digit
+    tax				calculate the price of something plus sales tax
+    vowelcount		counts the vowels in the string given
+    wxhfloor		finds cost to tile WxH floor.
+    
+    ############
+    # Syntaxes #
+    ############
+    
+    bank_manager	interactive
+    ccv				<cc number>
+    change-return	interactive
+    e_to_nth		interactive
+    factorial		<number>
+    fs				interactive
+    hn				<number>
+    horoscope		<zodiac sign>
+    mortgage		interactive
+    pdrome			"<string>"
+    pf				<number>
+    pi-to-nth		interactive
+    tax				<state or %> <subtotal> or interactive
+    vowelcount		"<string>"
+    wxhfloor		interactive
+######Rosetta Code
+    99bottles		♪ Ninety-nine bottles of beer on the wall, take one down and pass it around… ♪
+    floyd			generates n rows of floyd's triangle
+    
+    ############
+    # Syntaxes #
+    ############
+    
+    99bottles		*no syntax*
+    floyd			<rows>
