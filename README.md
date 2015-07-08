@@ -1,5 +1,7 @@
 # all
-*a repo for all of my scripts.*
+*a repo for all of my scripts.*  
+*some of my scripts may require **jq** (a JSON interpreter). `sudo apt-get jq` `brew install jq`*  
+***
     
      __                        __                   __              ___    ___      
     /\ \                      /\ \                 /\ \            /\_ \  /\_ \     
