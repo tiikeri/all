@@ -1,30 +1,30 @@
 #!/bin/bash
-str=$1
-count=0
+str=$1      #grab the string
+count=0     #reset variables
 te=0
 fe=0
 fve=0
-array=()
-lastnine=()
-definedloop=(4 16 37 58 59 145 42)
+array=()    #set an array so the program can check
+#4 16 37 58 59 145 42# #the defined loop sequence for happy numbers, used as reference when making the code
 if [[ ${#str} == 1 ]] ; then str="0$str" ; fi
 math(){ 
-	echo "$1" | bc
+	echo "$1" | bc #shortcut for bc
 }
-	while [[ $str != 1 ]] 
-	do
-				if [[ $(echo "${array[*]}") == *"41637588914542204" ]] ; then
+while [[ $str != 1 ]] #loops until the result is 1 (which means it's a happy number.)
+  do
+				if [[ $(echo "${array[*]}") == *"41637588914542204" ]] ; then #check if the sequence will loop
 			echo "This is not a happy number. (Loop detected.)"
 			exit 1
 		fi
-		if [[ ${#str} == 1 ]] ; then str="0$str" ; fi
+		if [[ ${#str} == 1 ]] ; then str="0$str" ; fi #manipulate x into 0x to make it have two digits
 			i=0
-			split=()
-			while [[ $i -lt ${#str} ]]
+			split=() #create an array for splitting digits up
+			while [[ $i -lt ${#str} ]] 
 		       	do 
-				split+=(${str:$i:1})
+				split+=(${str:$i:1}) #split digits
 		      	 	i=$((i+1))
 		       	done
+            ###math###
 			a="${split[0]}" 
 			b="${split[1]}"
 			te=0; fe=0; fve=0;

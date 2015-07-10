@@ -1,7 +1,7 @@
 #!/bin/bash
 checkprovider(){
-	str=$1
-	fdig=$(echo ${str%???????????????})
+	str=$1                    #grab the string
+	fdig=$(echo ${str:0:1})   #pull the first digit to check provider of card
 	case "$fdig" in
 	4)
 	provider="Visa"
@@ -18,8 +18,8 @@ checkprovider(){
 	*)
 	provider="Unknown Provider"
 	esac
-	echo "Entered CC number: $str"
-	echo "Entered CC's provider: $provider"
+	echo "Entered CC number: $str"            #display number 
+	echo "Entered CC's provider: $provider"   #display provider
 }
 getchecknumber(){ # get the last digit of the cc number
 	str=$1
