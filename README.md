@@ -1,6 +1,12 @@
 # all
 *a repo for all of my scripts.*  
-*some of my scripts may require **jq** (a JSON interpreter). `sudo apt-get jq` `brew install jq`*  
+**some scripts may require the following:**
+  
+- `jq` 
+- `openssl`
+
+*both of these can be found and installed by `apt-get` and `brew`.*
+
 ***
     
      __                        __                   __              ___    ___      
@@ -23,7 +29,8 @@
     virc			checks the vircurex exchange for cryptocurrencies
     balance			evaluates and balances two equations
     mendel			generates probability of offspring getting a gene via mendelian genetics
-    encryptions		anything in encryption-scripts. 
+    encryptions		anything in encryption-scripts.
+    pwsafe			a password safe that keeps your passwords protected by using aes256 encryption. 
     
     ##############
     #  Syntaxes  #
@@ -38,7 +45,8 @@
     stocks			<ticker> - e.g GOOG or AAPL
     virc			<currency> <currency> - e.g DOGE BTC
     balance			<equation1> <equation2> - e.g (1+1)4 4(4-2)
-	encryptions		<string>		
+	encryptions		<string>
+	pwsafe			interactive		
     
 ###Scripts based on coding problems -
 ######Euler's Project:
