@@ -1,5 +1,5 @@
 #!/bin/bash
-# ccoinp.sh: get crypto-coin prices, courtesy of the bter api
+# ccoinp.sh: get crypto-coin prices, courtesy of the vircurex api
 # requires jq. (sudo apt-get jq) (brew install jq)
 command -v jq >/dev/null 2>&1 || { echo >&2 "This program requires jq (A json interpreter.)"; exit 1; }
 touch json.txt
