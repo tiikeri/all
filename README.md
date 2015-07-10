@@ -94,6 +94,8 @@
     langinascii		displays 'bash shell' in 3D ASCII art
     rot13			prints the string in rot13
     sumdigits		displays the sum of all digits in a number
+    ptg				'pig the dice' game
+    rps				rock, paper, scissors!
     
     ############
     # Syntaxes #
@@ -104,3 +106,5 @@
     langinascii		*no syntax*
     rot13			"<strings>"
     sumdigits		<number>
+    ptg				interactive
+    rps				interactive
