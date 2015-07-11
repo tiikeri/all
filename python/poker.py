@@ -12,7 +12,7 @@ while s <= 3:  # shuffle the deck three times for ensured randomness
     random.shuffle(deck_of_cards)
     s += 1
 c = 1
-
+tok=0
 hand = []  # make a list for the hand
 while c <= 5:
     pick = random.randint(0, int(len(deck_of_cards)) - 1)  # choose a number from 1 to how many cards are left
@@ -52,6 +52,8 @@ def is_straight_flush():
                       '[2, 3, 4, 5]']:
 
             print 'STRAIGHT FLUSH'
+            print ' '.join(hand)
+            exit()
 
 
 def is_four_of_a_kind():
@@ -71,7 +73,8 @@ def is_four_of_a_kind():
         kcount,
         )):
         print '4 OF A KIND'
-
+        print ' '.join(hand)
+        exit()
 
 def is_full_house():
     if any(x == 3 for x in (
@@ -104,12 +107,15 @@ def is_full_house():
         kcount,
         )):
         print 'FULL HOUSE'
+        print ' '.join(hand)
+        exit()
 
 
 def is_flush():
     if any(x == 5 for x in (dmd, clb, hrt, spd)):
         print 'FLUSH'
-
+        print ' '.join(hand)
+        exit()
 
 def is_straight():
     vals = [int(n) for n in str.split() if s.isdigit()]
@@ -121,7 +127,8 @@ def is_straight():
     elif vals == ['[7, 8, 9, 10]', '[8, 9, 10]', '[9, 10]',
                   '[2, 3, 4, 5]']:
         print 'STRAIGHT'
-
+        print ' '.join(hand)
+        exit()
 
 def is_three_of_a_kind():
     if any(x == 3 for x in (
@@ -140,7 +147,8 @@ def is_three_of_a_kind():
         kcount,
         )):
         print 'THREE OF A KIND'
-
+        print ' '.join(hand)
+        exit()
 
 def is_pair():
     if any(x == 2 for x in (
@@ -159,25 +167,43 @@ def is_pair():
         kcount,
         )):
         print 'PAIR'
+        print ' '.join(hand)
     else:
-        handv = ' '.join(hand)
-        if 'K' in handv:
-            print 'KING HIGH'
-        elif 'Q' in handv:
-            print 'QUEEN HIGH'
-        elif 'J' in handv:
-            print 'JACK HIGH'
-        elif '10' in handv:
-            print 'TEN HIGH'
-        elif '9' in handv:
-            print 'NINE HIGH'
-        elif '8' in handv:
-            print 'EIGHT HIGH'
-        elif '7' in handv:
-            print 'SEVEN HIGH'
-        elif '6' in handv:
-            print 'SIX HIGH'
-
+        if any(x == 3 for x in (
+        acount,
+        twocount,
+        threecount,
+        fourcount,
+        fivecount,
+        sixcount,
+        sevencount,
+        eightcount,
+        ninecount,
+        tencount,
+        jcount,
+        qcount,
+        kcount,
+        )):
+            tok=1        
+        else:
+            handv = ' '.join(hand)
+            if 'K' in handv:
+                print 'KING HIGH'
+            elif 'Q' in handv:
+                print 'QUEEN HIGH'
+            elif 'J' in handv:
+                print 'JACK HIGH'
+            elif '10' in handv:
+                print 'TEN HIGH'
+            elif '9' in handv:
+                print 'NINE HIGH'
+            elif '8' in handv:
+                print 'EIGHT HIGH'
+            elif '7' in handv:
+                print 'SEVEN HIGH'
+            elif '6' in handv:
+                print 'SIX HIGH'
+            print ' '.join(hand)
 
 print ''
 is_straight_flush()
@@ -190,5 +216,3 @@ is_three_of_a_kind()
 # is_two_pairs,
 
 is_pair()
-print ' '.join(hand)
-
