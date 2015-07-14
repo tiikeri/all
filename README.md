@@ -1,5 +1,5 @@
 # all
-*a repo for all of my scripts.*  
+*this repo is all of my other repos for scripts conjoined.*  
 **some scripts may require the following:**
   
 - `jq` 
