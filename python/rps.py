@@ -11,19 +11,14 @@ if q==3: q="s" ; st="scissors"
 if p=="r": so="rock"
 if p=="p": so="paper"
 if p=="s": so="scissors"
-vs=[]
-vs.append(p)
-vs.append(q)
-vs=' '.join(vs)
+vs=[] ; vs.append(p) ; vs.append(q) ; vs=''.join(vs)
 def pWin():
- if vs in ["r s", "p r", "s p"]: print "You win!"
+    if vs in ["rs", "pr", "sp"]: print "You win!"
 def pLoss():
- if vs in ["s r", "r p", "p s"]: print "Sorry, you lose."
+    if vs in ["sr", "rp", "ps"]: print "Sorry, you lose."
 def tie():
- if vs in ["r r", "p p", "s s"]: print "It's a tie!"
- 
-print "YOU: %s" % so
-print "COM: %s" % st
+    if vs in ["rr", "pp", "ss"]: print "It's a tie!"
+print "YOU: %s" % so ; print "COM: %s" % st
 pWin()
 pLoss()
 tie()

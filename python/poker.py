@@ -169,22 +169,6 @@ def is_pair():
         print 'PAIR'
         print ' '.join(hand)
     else:
-        if any(x == 3 for x in (
-        acount,
-        twocount,
-        threecount,
-        fourcount,
-        fivecount,
-        sixcount,
-        sevencount,
-        eightcount,
-        ninecount,
-        tencount,
-        jcount,
-        qcount,
-        kcount,
-        )):
-            tok=1        
         else:
             handv = ' '.join(hand)
             if 'K' in handv:
