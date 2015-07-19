@@ -1,7 +1,0 @@
-#!/bin/bash
-echo -n "$1" | openssl dgst -sha256 | while read -n 1 x ; do 
-	printf "\e[031m$x"
-	sleep 0.001
-done
-echo ""
-
